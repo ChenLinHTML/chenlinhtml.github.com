@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>H5course - 案例视频需求文档</title>
+	<link rel="stylesheet" href="stylesheets/common.css">
+	<script src="javascripts/jquery-1.11.2.js" charset="utf-8" type="text/javascript"></script>
+</head>
+<style>
+	.wrap {
+		width: 1240px;
+		margin: 0 auto; 
+	}
+	.wrap span {
+		float: left;
+		width: 300px;
+		height: 40px;
+		margin: 2px 5px;
+		font-size: 20px;
+		line-height: 40px;
+		background-color: #999;
+	}
+	.wrap .change {
+		background-color: #fcf;
+	}
+</style>
+<body>
+	<div class="wrap fixed">
+		<!-- <h1>JQ 导航文字细微变化</h1>
+		<p>当鼠标移入到相应导航标题时，标题文字向右缓慢运动，同时背景颜色发生变化（加深）。</p> -->
+		<span>案例难度：★01</span>
+		<span>案例难度：★02</span>
+		<span>案例难度：★03</span>
+		<span>案例难度：★04</span>
+		<span>案例难度：★05</span>
+		<span>案例难度：★06</span>
+		<span>案例难度：★07</span>
+		<span>案例难度：★08</span>
+		<span>案例难度：★09</span>
+		<span>案例难度：★10</span>
+		<span>案例难度：★11</span>
+		<span>案例难度：★12</span>
+		<span>案例难度：★13</span>
+		<span>案例难度：★14</span>
+		<span>案例难度：★15</span>
+		<span>案例难度：★16</span>
+	</div>
+	<script>
+		var main = $(".wrap span");
+		main.hover(function() {
+			$(this).addClass("change");
+			$(this).stop(true, true).animate({
+  				"width" : "240px",
+  				"padding-left" : "60px"
+  			}, 3000);	
+		}, function() {
+			$(this).removeClass("change");
+			$(this).stop(true, true).animate({
+  				"padding-left" : "0px",
+  				"width" : "300px"
+  			}, 1000);
+		});
+
+	</script>
+	
+</body>
+</html>
