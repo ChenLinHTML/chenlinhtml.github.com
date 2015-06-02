@@ -1,90 +1,67 @@
 <!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
-  <link rel="stylesheet" href="stylesheets/github-dark.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
-
-  <title>Chenlinhtml.GitHub.com</title>
-  <meta name="description" content="My first project!">
-
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
+	<meta charset="UTF-8">
+	<title>H5course - 案例视频需求文档</title>
+	<link rel="stylesheet" href="stylesheets/common.css">
+	<script src="javascripts/jquery-1.11.2.js" charset="utf-8" type="text/javascript"></script>
 </head>
-
+<style>
+	.wrap {
+		width: 1240px;
+		margin: 0 auto; 
+	}
+	.wrap span {
+		float: left;
+		width: 300px;
+		height: 40px;
+		margin: 2px 5px;
+		font-size: 20px;
+		line-height: 40px;
+		background-color: #999;
+	}
+	.wrap .change {
+		background-color: #fcf;
+	}
+</style>
 <body>
+	<div class="wrap fixed">
+		<!-- <h1>JQ 导航文字细微变化</h1>
+		<p>当鼠标移入到相应导航标题时，标题文字向右缓慢运动，同时背景颜色发生变化（加深）。</p> -->
+		<span>案例难度：★01</span>
+		<span>案例难度：★02</span>
+		<span>案例难度：★03</span>
+		<span>案例难度：★04</span>
+		<span>案例难度：★05</span>
+		<span>案例难度：★06</span>
+		<span>案例难度：★07</span>
+		<span>案例难度：★08</span>
+		<span>案例难度：★09</span>
+		<span>案例难度：★10</span>
+		<span>案例难度：★11</span>
+		<span>案例难度：★12</span>
+		<span>案例难度：★13</span>
+		<span>案例难度：★14</span>
+		<span>案例难度：★15</span>
+		<span>案例难度：★16</span>
+	</div>
+	<script>
+		var main = $(".wrap span");
+		main.hover(function() {
+			$(this).addClass("change");
+			$(this).stop(true, true).animate({
+  				"width" : "240px",
+  				"padding-left" : "60px"
+  			}, 3000);	
+		}, function() {
+			$(this).removeClass("change");
+			$(this).stop(true, true).animate({
+  				"padding-left" : "0px",
+  				"width" : "300px"
+  			}, 1000);
+		});
 
-  <div class="wrapper">
-    <header>
-      <h1 class="title">Chenlinhtml.GitHub.com</h1>
-    </header>
-    <div id="container">
-      <p class="tagline">My first project!</p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://github.com/ChenLinHTML" class="code">View Chenlinhtml.GitHub.com on GitHub</a>
-        </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="https://help.github.com/pages">https://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </article>
-      </div>
-    </div>
-    <footer>
-      <div class="owner">
-
-      <p><a href="https://github.com/ChenLinHTML" class="avatar"><img src="https://avatars1.githubusercontent.com/u/12716300?v=3&amp;s=60" width="48" height="48"></a>View <a href="https://github.com/ChenLinHTML">ChenLinHTML</a> on <a href="https://www.github.com">GitHub</a></p>
-
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
-    </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <a href="https://github.com/ChenLinHTML/chenlinhtml.github.com/tarball/master" class="tar">tar</a><a href="https://github.com/ChenLinHTML/chenlinhtml.github.com/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
-    <p class="name"></p>
-  </div>
-
-  
+	</script>
+	
 </body>
 </html>
